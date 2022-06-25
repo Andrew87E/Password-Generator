@@ -95,19 +95,22 @@ return pass.join("");
 }
 //auto copy the password to clipboard
 function autoCopy(){
-  // click the box to auto copy it!
-var copyText = document.getElementById("password");
+  var empty = document.querySelector("#password").value;
+  if (empty == null || empty == " " || empty.length == 0 || empty === "Invalid input. Please try again.") {
+    return; //check for empty box...wont run on empty
+  }
+  else {
+    var copyText = document.querySelector("#password")
 // auto choose the text field 
-copyText.select();
-copyText.setSelectionRange(0, 99999); // works on mobile too!!
-
- // copy the text to the clipboard
-navigator.clipboard.writeText(copyText.value);
-
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // works on mobile too!!
+// copy the text to the clipboard
+    navigator.clipboard.writeText(copyText.value);
 // alert that the text has been coppied
-alert("Copied the password: " + copyText.value + " to the clipboard!");
+    alert("Copied the password: " + copyText.value + " to the clipboard!");
+  }
 }
-
+// click the box to auto copy it!
 
 
 
