@@ -18,9 +18,9 @@ Next you will be presented with a prompt asking how many characters you want you
 <details>
     <summary>No funny business here</summary>
     <br>
-    The generator will stop here and alert if a valid number is not entered. &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;  The generator will also alert the user if they have not selected any values!
+    The generator will alert the user if they have not selected anything! The generator will stop here and alert if a valid number is not entered.  
     <br>
-        <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_23-07.png?raw=true" width=450 height=350 align="left" alt="Happens when no valid number entred">   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;
+        <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_23-07.png?raw=true" width=450 height=350 align="left" alt="Happens when no valid number entred">   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;
         <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_23-08.png?raw=true" width=450 height=350 alt="What happens when no characters are selected">
 <br>
 <br>
