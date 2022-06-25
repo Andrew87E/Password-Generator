@@ -2,6 +2,9 @@
 var generateBtn = document.querySelector("#generate");
 // empty variable to be used later
 var length ;
+//min and max length of password
+var minLength = 8;
+var maxLength = 128;
 
 // character arrays 
 var uppers = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M"];
@@ -68,7 +71,7 @@ for (let i = 0; i < lengthAnswer - counter; i++) {
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
   // whle there are characters left to shuffle 
-  while (currentIndex != 0) {i
+  while (currentIndex != 0) {
     // pick the remaining
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
