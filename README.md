@@ -17,7 +17,10 @@ Click the Generate Password button to be presented with a series of prompts.
 Next you will be presented with a prompt asking how many characters you want your password to be. 
 <details>
     <summary>No funny business here</summary>
-    The generator will stop here and alert if a valid number is not entered.</details>
+    <br>
+    The generator will stop here and alert if a valid number is not entered.
+        
+    </details>
 
 ![password-generator3](./assets/images/2022-06-24_22-37.png)
 
