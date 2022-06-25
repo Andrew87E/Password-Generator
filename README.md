@@ -18,9 +18,10 @@ Next you will be presented with a prompt asking how many characters you want you
 <details>
     <summary>No funny business here</summary>
     <br>
-    The generator will alert the user if they have not selected anything! The generator will stop here and alert if a valid number is not entered.  
+    The generator will alert the user if they have not selected anything!  
     <br>
-        <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_23-07.png?raw=true" width=450 height=350 align="left" alt="Happens when no valid number entred">   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;
+        <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_23-07.png?raw=true" width=450 height=350 alt="Happens when no valid number entred"><br>
+    The generator will stop here and alert if a valid number is not entered!<br>
         <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_23-08.png?raw=true" width=450 height=350 alt="What happens when no characters are selected">
 <br>
 <br>
@@ -52,9 +53,14 @@ Once you make all of your choices. your password will be displayed int he box!
 
 Clickon the box to copy your new password!
 
-<img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-25_01-16.png?raw=true" width=650 height=350 alt="click the box to copy your new Password!">
+<img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-25_01-16.png?raw=true" width=650 height=350 alt="click the box to copy your new Password!"><br>
+
+## Collaborators
+
+[Kurt Bixby](https://github.com/kurtbixby)
 
 ## Bug Testers
+
 Mobile Tester [Jeffrey Littleton](https://github.com/littletonjeffrey)<br>
 
 Desktop Tester [Dustin](https://github.com/Dusticcus/)
