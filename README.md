@@ -20,9 +20,13 @@ Next you will be presented with a prompt asking how many characters you want you
     <br>
     The generator will stop here and alert if a valid number is not entered. &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;  The generator will also alert the user if they have not selected any values!
     <br>
-        <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_23-07.png?raw=true" width=450 height=350 align="left" alt="Happens when no valid number entred">
-        <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_23-08.png?raw=true" width=450 height=350 align="right" alt="What happens when no characters are selected">
-    </details>
+        <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_23-07.png?raw=true" width=450 height=350 align="left" alt="Happens when no valid number entred">   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;
+        <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_23-08.png?raw=true" width=450 height=350 alt="What happens when no characters are selected">
+<br>
+<br>
+<br>
+<br>
+</details>
 
 <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_22-37.png?raw=true" width=650 height=350 alt="Enter 8-128 characters">
 
@@ -42,9 +46,18 @@ Finally, choose if you want special characters in your password or not.
 
 <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_22-38_1.png?raw=true" width=650 height=350 alt="Choose Special Characters or no">
 
-Once you make all of your choices. your password will be displayed inthe box!
+Once you make all of your choices. your password will be displayed int he box!
 
 <img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-24_22-38_2.png?raw=true" width=650 height=350 alt="Check the box for your new Password!">
+
+Clickon the box to copy your new password!
+
+<img src="https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/2022-06-25_01-16.png?raw=true" width=650 height=350 alt="click the box to copy your new Password!">
+
+## Bug Testers
+Mobile Tester [Jeffrey Littleton](https://github.com/littletonjeffrey)<br>
+
+Desktop Tester [Dustin](https://github.com/Dusticcus/)
 
 ## Team
 

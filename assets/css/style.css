@@ -14,28 +14,33 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
 }
 
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+  text-align: center;
+  background-color: black;
+  /* background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%); */
 }
 
 header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: #2AF598;
+  text-shadow: 2px 1px #08AEEA;
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: #08AEEA;
+  background-image: linear-gradient(19deg, #08AEEA 0%, #2AF598 100%);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  color: #780206;
+  text-shadow: 2px 1px #2AF598;
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
@@ -46,7 +51,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: black;
   height: 2px;
 }
 
@@ -62,7 +67,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: black;
   height: 2px;
 }
 
@@ -72,25 +77,51 @@ header {
   clear: both;
 }
 
+#generate {
+  background-image: linear-gradient(to right, #780206 0%, #061161  51%, #780206  100%)
+}
+
 .btn {
-  border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
+	color: rgb(64, 255, 0);
+  font-family: 'Fredoka One', cursive;
   display: inline-block;
   font-size: 22px;
+  font-weight: bold;
   line-height: 22px;
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
   text-align: center;
-  cursor: pointer;
+  height: 100%;
+	width: 90%;
+	cursor: pointer;
+	background-color: #08e1ae;
+	background-image: linear-gradient(315deg, #08e1ae 0%, #98de5b 74%);
+	border: none;
+	border-radius: 50px 50px 30px 30px;
+	transition: 1s;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
+
+button:active {
+	border: none;
+	outline: none;
+}
+
+button:hover {
+	border-radius: 100px 100px 20px 20px;
+	height: 45px;
+	width: 365px;
+  color: #08AEEA;
+}
+
 
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
+}
+
+button:active {
+	filter: hue-rotate(90deg);
 }
 
 .float-right {
@@ -112,11 +143,13 @@ button[disabled] {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px dashed yellowgreen;
   border-radius: 6px;
   resize: none;
   overflow: hidden;
-}
+  color: #98de5b;
+  background-image: linear-gradient( 109.6deg,  rgba(15,2,2,1) 11.2%, rgba(36,163,190,1) 91.1% );
+  }
 
 @media (max-width: 690px) {
   .btn {
