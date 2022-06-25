@@ -6,27 +6,35 @@ var length ;
 var minLength = 8;
 var maxLength = 128;
 
+// var invalid = "Invalid input";
+var sayInvalid = "Invalid input. Please try again.";
 // character arrays 
 var uppers = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M"];
 var lowers = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"];
 var numbers = ["1","2","3","4","5","6","7","8","9","0"];
 var symbols = ["!","@","#","$","%","^","&","*"];
+  // writes invalid selection in text box
+var invalid = document.querySelector("#password");
 
 // function to generate the password
 function generatePassword(){
-  var lengthAnswer = window.prompt("How long should your password be? Please choose a number between " + minLength +" and " +maxLength); // prompt the use for the number of characters to be used in the password
-  //check if the user input is Not a Number...alert the user and return to the begining
-  if (isNaN(lengthAnswer)) {
+  // prompt the use for the number of characters to be used in the password
+  var lengthAnswer = window.prompt("How long should your password be? Please choose a number between " + minLength +" and " +maxLength); 
+  if (lengthAnswer === null) {
+    window.alert("Please enter a value");
+    return invalid.value = sayInvalid;
+      //check if the user input is Not a Number...alert the user and return to the begining
+  } else if (isNaN(lengthAnswer)) {
     window.alert(lengthAnswer +" is not a valid number. Please try again.");
-    return;
+    return invalid.value = sayInvalid;
     //check if the user input is larger than 128...alert the user and return to the begining
   } else if (lengthAnswer > 128){
     window.alert(lengthAnswer +" is not a valid selection. Please try again.");
-    return;
+    return invalid.value = sayInvalid;
     //check if the user input is smaller than 8...alert the user and return to the begining
   } else if (lengthAnswer < 8){
     window.alert(lengthAnswer +" is not a valid number");
-    return;
+    return invalid.value = sayInvalid;
   }
 // empty arrays for future use
   var pass = [];
@@ -99,6 +107,9 @@ navigator.clipboard.writeText(copyText.value);
 // alert that the text has been coppied
 alert("Copied the password: " + copyText.value + " to the clipboard!");
 }
+
+
+
 
 // Write password to the #password input
 function writePassword() {
