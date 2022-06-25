@@ -5,7 +5,6 @@ var length ;
 //min and max length of password
 var minLength = 8;
 var maxLength = 128;
-
 // var invalid = "Invalid input";
 var sayInvalid = "Invalid input. Please try again.";
 // character arrays 
@@ -13,9 +12,8 @@ var uppers = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J
 var lowers = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"];
 var numbers = ["1","2","3","4","5","6","7","8","9","0"];
 var symbols = ["!","@","#","$","%","^","&","*"];
-  // writes invalid selection in text box
+// writes invalid selection in text box
 var invalid = document.querySelector("#password");
-
 // function to generate the password
 function generatePassword(){
   // prompt the use for the number of characters to be used in the password
@@ -110,16 +108,11 @@ function autoCopy(){
     alert("Copied the password: " + copyText.value + " to the clipboard!");
   }
 }
-// click the box to auto copy it!
-
-
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
