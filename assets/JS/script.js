@@ -85,6 +85,20 @@ function shuffle(array) {
 shuffle(pass);
 return pass.join("");
 }
+//auto copy the password to clipboard
+function autoCopy(){
+  // click the box to auto copy it!
+var copyText = document.getElementById("password");
+// auto choose the text field 
+copyText.select();
+copyText.setSelectionRange(0, 99999); // works on mobile too!!
+
+ // copy the text to the clipboard
+navigator.clipboard.writeText(copyText.value);
+
+// alert that the text has been coppied
+alert("Copied the password: " + copyText.value + " to the clipboard!");
+}
 
 // Write password to the #password input
 function writePassword() {
