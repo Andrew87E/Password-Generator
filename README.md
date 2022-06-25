@@ -2,7 +2,7 @@
  ## A simple JS Password Generator
  Made for challenge 3 UT-Austin coding bootcamp
 
-![Password-Generator](../Password-Generator/assets/images/Password_Generator_.gif "How to use gif")
+![Password-Generator](https://github.com/Andrew87E/Password-Generator/blob/main/assets/images/Password_Generator_.gif?raw=true "How to use gif")
 
 ## Demo
 
