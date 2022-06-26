@@ -89,6 +89,7 @@ function shuffle(array) {
 }
 //shuffle the combined array
 shuffle(pass);
+// takes commas out of array
 return pass.join("");
 }
 //auto copy the password to clipboard
