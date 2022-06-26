@@ -21,19 +21,11 @@ function generatePassword(){
   if (lengthAnswer === null) {
     window.alert("Please enter a value");
     return invalid.value = sayInvalid;
-      //check if the user input is Not a Number...alert the user and return to the begining
-  } else if (isNaN(lengthAnswer)) {
+      //check if the user input is Not a Number/has a decimal/greater than 8/less than 128...alert the user and return to the begining
+  } else if (!Number.isInteger(Number(lengthAnswer)) || isNaN(lengthAnswer) || lengthAnswer > 128 || lengthAnswer < 8) {
     window.alert(lengthAnswer +" is not a valid number. Please try again.");
     return invalid.value = sayInvalid;
-    //check if the user input is larger than 128...alert the user and return to the begining
-  } else if (lengthAnswer > 128){
-    window.alert(lengthAnswer +" is not a valid selection. Please try again.");
-    return invalid.value = sayInvalid;
-    //check if the user input is smaller than 8...alert the user and return to the begining
-  } else if (lengthAnswer < 8){
-    window.alert(lengthAnswer +" is not a valid number");
-    return invalid.value = sayInvalid;
-  }
+   }
 // empty arrays for future use
   var pass = [];
   var pwd = [];
@@ -113,6 +105,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
+  autoCopy();
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
