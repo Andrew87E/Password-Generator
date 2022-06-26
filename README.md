@@ -57,7 +57,8 @@ Clickon the box to copy your new password!
 
 ## Collaborators
 
-[Kurt Bixby](https://github.com/kurtbixby)
+[Kurt Bixby](https://github.com/kurtbixby)<br>
+[Zach Serrano](https://github.com/ZSerrano)
 
 ## Bug Testers
 
