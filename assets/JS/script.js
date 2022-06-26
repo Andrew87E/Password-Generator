@@ -40,22 +40,22 @@ function generatePassword(){
   if (numUppers) {
     pwd = pwd.concat(uppers);
     pass.push(uppers[Math.floor(Math.random() * uppers.length)]);
-    counter++
+    counter++ //ensures at least 1of these characters are in the final password
    //if using lowers shuffle the whole lowers array and push it to the empty pwd array add +1 to the counter
   } if (numLowers) {
     pwd = pwd.concat(lowers);
     pass.push(lowers[Math.floor(Math.random() * lowers.length)]);
-    counter++
+    counter++ //ensures at least 1of these characters are in the final password
     //if using numbers shuffle the whole numbers array and push it to the empty pwd array add +1 to the counter
   } if (numNumbers) {
     pwd = pwd.concat(numbers);
     pass.push(numbers[Math.floor(Math.random() * numbers.length)]);
-    counter++
+    counter++ //ensures at least 1of these characters are in the final password
     //if using symbols shuffle the whole symbols array and push it to the empty pwd array add +1 to the counter
   } if (numSymbols) {
     pwd = pwd.concat(symbols);
     pass.push(symbols[Math.floor(Math.random() * symbols.length)]);
-    counter++
+    counter++ //ensures at least 1of these characters are in the final password
     //check to make sure the user selected at least 1 character set
   } if (!(numUppers || numUppers || numSymbols || numNumbers)) {
     window.alert("Please select a valid password format.");
@@ -81,6 +81,7 @@ function shuffle(array) {
 }
 //shuffle the combined array
 shuffle(pass);
+// takes commas out of array
 return pass.join("");
 }
 //auto copy the password to clipboard
