@@ -55,3 +55,4 @@ copyBtn.addEventListener('click', async () => {
 window.addEventListener('DOMContentLoaded', () => {
   passwordText.value = generatePassword();
 });
+
