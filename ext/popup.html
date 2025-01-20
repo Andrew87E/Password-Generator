@@ -1,223 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
     <style>
-      /* Common styles for both light and dark modes */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 10px;
-        width: 300px;
-        transition: all 0.3s ease;
-      }
-
-      .container {
-        padding: 15px;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
-
-      h1 {
-        text-align: center;
-        font-size: 18px;
-        margin-top: 0;
-      }
-
-      .password-container {
-        display: flex;
-        margin-bottom: 10px;
-      }
-
-      #password {
-        flex: 1;
-        padding: 8px;
-        font-size: 14px;
-        border-radius: 4px;
-        resize: none;
-        height: 20px;
-        transition: all 0.3s ease;
-      }
-
-      #copyBtn {
-        margin-left: 10px;
-        padding: 8px 15px;
-        font-size: 14px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .settings {
-        margin-bottom: 15px;
-      }
-
-      .settings label {
-        display: block;
-        margin-bottom: 8px;
-        font-size: 14px;
-      }
-
-      #length {
-        width: 50px;
-        padding: 4px;
-        font-size: 14px;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-      }
-
-      #generateBtn {
-        display: block;
-        width: 100%;
-        padding: 8px;
-        font-size: 14px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      /* Light mode styles */
-      @media (prefers-color-scheme: light) {
+        /* Common styles for both light and dark modes */
         body {
-          background-color: #f5f5f5;
-          color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            width: 300px;
+            transition: all 0.3s ease;
         }
 
         .container {
-          background-color: #fff;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        .password-container {
+            display: flex;
+            margin-bottom: 10px;
         }
 
         #password {
-          background-color: #fff;
-          border: 1px solid #ccc;
-          color: #333;
-        }
-
-        #password:focus {
-          border-color: #007bff;
-          outline: none;
-        }
-
-        #copyBtn {
-          background-color: #007bff;
-          color: #fff;
-        }
-
-        #copyBtn:hover {
-          background-color: #0056b3;
-        }
-
-        #length {
-          background-color: #fff;
-          border: 1px solid #ccc;
-          color: #333;
-        }
-
-        #length:focus {
-          border-color: #007bff;
-          outline: none;
-        }
-
-        #generateBtn {
-          background-color: #28a745;
-          color: #fff;
-        }
-
-        #generateBtn:hover {
-          background-color: #218838;
-        }
-      }
-
-      /* Dark mode styles */
-      @media (prefers-color-scheme: dark) {
-        body {
-          background-color: #1a1a1a;
-          color: #f5f5f5;
-        }
-
-        .container {
-          background-color: #2d2d2d;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        #password {
-          background-color: #3d3d3d;
-          border: 1px solid #4d4d4d;
-          color: #f5f5f5;
-        }
-
-        #password:focus {
-          border-color: #0099ff;
-          outline: none;
+            flex: 1;
+            padding: 8px;
+            font-size: 14px;
+            border-radius: 4px;
+            resize: none;
+            height: 20px;
+            transition: all 0.3s ease;
         }
 
         #copyBtn {
-          background-color: #0099ff;
-          color: #fff;
+            margin-left: 10px;
+            padding: 8px 15px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        #copyBtn:hover {
-          background-color: #0077cc;
+        .settings {
+            margin-bottom: 15px;
+        }
+
+        .settings label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
         }
 
         #length {
-          background-color: #3d3d3d;
-          border: 1px solid #4d4d4d;
-          color: #f5f5f5;
-        }
-
-        #length:focus {
-          border-color: #0099ff;
-          outline: none;
+            width: 50px;
+            padding: 4px;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
 
         #generateBtn {
-          background-color: #2ea043;
-          color: #fff;
+            display: block;
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        #generateBtn:hover {
-          background-color: #2a9c3b;
+        /* Light mode styles */
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #f5f5f5;
+                color: #333;
+            }
+
+            .container {
+                background-color: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            #password {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                color: #333;
+            }
+
+            #password:focus {
+                border-color: #007bff;
+                outline: none;
+            }
+
+            #copyBtn {
+                background-color: #007bff;
+                color: #fff;
+            }
+
+            #copyBtn:hover {
+                background-color: #0056b3;
+            }
+
+            #length {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                color: #333;
+            }
+
+            #length:focus {
+                border-color: #007bff;
+                outline: none;
+            }
+
+            #generateBtn {
+                background-color: #28a745;
+                color: #fff;
+            }
+
+            #generateBtn:hover {
+                background-color: #218838;
+            }
         }
-      }
+
+        /* Dark mode styles */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+                color: #f5f5f5;
+            }
+
+            .container {
+                background-color: #2d2d2d;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            }
+
+            #password {
+                background-color: #3d3d3d;
+                border: 1px solid #4d4d4d;
+                color: #f5f5f5;
+            }
+
+            #password:focus {
+                border-color: #0099ff;
+                outline: none;
+            }
+
+            #copyBtn {
+                background-color: #0099ff;
+                color: #fff;
+            }
+
+            #copyBtn:hover {
+                background-color: #0077cc;
+            }
+
+            #length {
+                background-color: #3d3d3d;
+                border: 1px solid #4d4d4d;
+                color: #f5f5f5;
+            }
+
+            #length:focus {
+                border-color: #0099ff;
+                outline: none;
+            }
+
+            #generateBtn {
+                background-color: #2ea043;
+                color: #fff;
+            }
+
+            #generateBtn:hover {
+                background-color: #2a9c3b;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <h1>Password Generator</h1>
-      <div class="password-container">
-        <textarea id="password" readonly></textarea>
-        <button id="copyBtn">Copy</button>
-      </div>
-      <div class="settings">
-        <label>
-          <input type="checkbox" id="uppercase" checked />
-          Include Uppercase Letters
-        </label>
-        <label>
-          <input type="checkbox" id="lowercase" checked />
-          Include Lowercase Letters
-        </label>
-        <label>
-          <input type="checkbox" id="numbers" checked />
-          Include Numbers
-        </label>
-        <label>
-          <input type="checkbox" id="symbols" checked />
-          Include Symbols
-        </label>
-        <label>
-          Password Length:
-          <input type="number" id="length" value="16" min="8" max="128" />
-        </label>
-      </div>
-      <button id="generateBtn">Generate Password</button>
+        <h1>Password Generator</h1>
+        <div class="password-container">
+            <textarea id="password" readonly></textarea>
+            <button id="copyBtn">Copy</button>
+        </div>
+        <div class="settings">
+            <label>
+                <input type="checkbox" id="uppercase" checked />
+                Include Uppercase Letters
+            </label>
+            <label>
+                <input type="checkbox" id="lowercase" checked />
+                Include Lowercase Letters
+            </label>
+            <label>
+                <input type="checkbox" id="numbers" checked />
+                Include Numbers
+            </label>
+            <label>
+                <input type="checkbox" id="symbols" checked />
+                Include Symbols
+            </label>
+            <label>
+                Password Length:
+                <input type="number" id="length" value="16" min="8" max="128" />
+            </label>
+        </div>
+        <button id="generateBtn">Generate Password</button>
     </div>
     <script src="popup.js"></script>
-  </body>
+</body>
+
 </html>
