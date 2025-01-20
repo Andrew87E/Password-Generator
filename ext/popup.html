@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 10px;
+        width: 300px;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        font-size: 18px;
+        margin-top: 0;
+      }
+
+      .password-container {
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      #password {
+        flex: 1;
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: none;
+        height: 20px;
+      }
+
+      #copyBtn {
+        margin-left: 10px;
+        padding: 8px 15px;
+        font-size: 14px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .settings {
+        margin-bottom: 15px;
+      }
+
+      .settings label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+
+      #length {
+        width: 50px;
+        padding: 4px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      #generateBtn {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Generator</h1>
+      <div class="password-container">
+        <textarea id="password" readonly></textarea>
+        <button id="copyBtn">Copy</button>
+      </div>
+      <div class="settings">
+        <label>
+          <input type="checkbox" id="uppercase" checked />
+          Include Uppercase Letters
+        </label>
+        <label>
+          <input type="checkbox" id="lowercase" checked />
+          Include Lowercase Letters
+        </label>
+        <label>
+          <input type="checkbox" id="numbers" checked />
+          Include Numbers
+        </label>
+        <label>
+          <input type="checkbox" id="symbols" checked />
+          Include Symbols
+        </label>
+        <label>
+          Password Length:
+          <input type="number" id="length" value="16" min="8" max="128" />
+        </label>
+      </div>
+      <button id="generateBtn">Generate Password</button>
+    </div>
+    <script src="./popup.js"></script>
+  </body>
+</html>
